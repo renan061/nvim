@@ -1,5 +1,8 @@
 "" basic configurations
-source ~/.config/nvim/basics.vim
+" source ~/.config/nvim/basics.vim
 
-"" vim-plug settings
-source ~/.config/nvim/vimplug.vim
+"" nvim-tree
+source ~/.config/nvim/_nvim-tree.vim
+
+"" packer (plugins)
+lua require('plugins')
