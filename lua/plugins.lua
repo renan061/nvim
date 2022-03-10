@@ -1,11 +1,19 @@
 
-return require('packer').startup(function()
+return require("packer").startup(function()
     -- packer manages itself
-    use 'wbthomason/packer.nvim'
+    use "wbthomason/packer.nvim"
 
+    -- dracula color scheme
+    use "Mofiqul/dracula.nvim"
+
+    -- nvim-tree
     use {
-        'kyazdani42/nvim-tree.lua',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function() require('_nvim-tree').setup({}) end
+        "kyazdani42/nvim-tree.lua",
+        requires = { "kyazdani42/nvim-web-devicons" },
+        config = function() require("nvim-tree").setup({}) end
     }
+
+    -- ale (linter)
+    use "dense-analysis/ale"
 end)
+
