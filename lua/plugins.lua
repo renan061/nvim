@@ -13,6 +13,9 @@ return require("packer").startup(function()
         config = function() require("nvim-tree").setup({}) end
     }
 
+    -- coqtail
+    use "whonore/Coqtail"
+
     -- ale (linter)
     use "dense-analysis/ale"
 end)

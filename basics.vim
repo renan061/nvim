@@ -1,3 +1,16 @@
+"" coqtail highlights and syntax
+function! CoqtailHighlights() abort
+    highlight CoqtailChecked  guibg=DeepSkyBlue4
+    highlight CoqtailSent     guibg=DodgerBlue2
+endfunction
+
+augroup CoqtailColors
+    autocmd!
+    autocmd ColorScheme * call CoqtailHighlights()
+augroup END
+
+let g:coqtail_nosyntax = 1
+
 "" color scheme
 colorscheme dracula
 
