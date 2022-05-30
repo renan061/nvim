@@ -16,6 +16,9 @@ return require("packer").startup(function()
     -- coqtail
     use "whonore/Coqtail"
 
+    -- markdown
+    use "iamcco/markdown-preview.nvim"
+
     -- ale (linter)
     use "dense-analysis/ale"
 end)

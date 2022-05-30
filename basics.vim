@@ -10,6 +10,9 @@ augroup CoqtailColors
 augroup END
 
 let g:coqtail_nosyntax = 1
+"" let g:coqtail_noindent = 1
+let g:coqtail_noindent_comment = 1
+
 
 "" color scheme
 colorscheme dracula

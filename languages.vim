@@ -2,9 +2,6 @@
 syntax enable
 filetype plugin indent on
 
-"" always show the gutter
-" set signcolumn=yes
-
 let g:ale_linters = {
 \   'rust' : ['rls'],
 \}
