@@ -1,25 +1,19 @@
+local packer = require("packer").startup(function()
+    use "wbthomason/packer.nvim" -- packer manages itself
 
-return require("packer").startup(function()
-    -- packer manages itself
-    use "wbthomason/packer.nvim"
+    use "neovim/nvim-lspconfig" 
 
-    -- dracula color scheme
     use "Mofiqul/dracula.nvim"
 
-    -- nvim-tree
-    use {
+    use { -- nvim-tree
         "kyazdani42/nvim-tree.lua",
         requires = { "kyazdani42/nvim-web-devicons" },
-        config = function() require("nvim-tree").setup({}) end
     }
 
-    -- coqtail
     use "whonore/Coqtail"
-
-    -- markdown
-    use "iamcco/markdown-preview.nvim"
-
-    -- ale (linter)
-    use "dense-analysis/ale"
 end)
+
+require("nvim-tree").setup({})
+
+return packer
 
