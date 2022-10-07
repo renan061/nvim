@@ -1,11 +1,11 @@
 require("plugins")
-
 require("basics")
 local mappings = require("mappings")
 
-require("lspconfig").rust_analyzer.setup({
-    on_attach = mappings.on_attach,
-})
+local lspconfig = require("lspconfig")
+lspconfig.rust_analyzer.setup({on_attach = mappings.on_attach})
+lspconfig.elmls.setup({on_attach = mappings.on_attach})
+lspconfig.hls.setup({on_attach = mappings.on_attach})
 
 vim.diagnostic.config({
     virtual_text = false,
