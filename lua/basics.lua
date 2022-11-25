@@ -42,3 +42,4 @@ vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]])
 -- vim.g.coqtail_noindent = 1
 vim.g.coqtail_noindent_comment = 1
 vim.g.coqtail_nomap = 1
+vim.g.coqtail_noimap = 1
