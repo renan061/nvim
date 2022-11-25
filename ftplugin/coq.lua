@@ -45,6 +45,6 @@ do
 
     map_query("a", "About")
     map_query("h", "Check")
-    map_query("o", "Locate")
+    -- map_query("o", "Locate")
     map_query("p", "Print")
 end
