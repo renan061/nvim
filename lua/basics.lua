@@ -35,7 +35,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- auto format on save
-vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]])
+vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
 
 -- coqtail
 -- vim.g.coqtail_nosyntax = 1
