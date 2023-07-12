@@ -5,9 +5,9 @@ require("mappings")
 
 local lspconfig = require("lspconfig")
 lspconfig.rust_analyzer.setup({})
-lspconfig.elmls.setup({})
-lspconfig.hls.setup({})
-lspconfig.gopls.setup({})
+-- lspconfig.elmls.setup({})
+-- lspconfig.hls.setup({})
+-- lspconfig.gopls.setup({})
 
 vim.diagnostic.config({
     virtual_text = false,

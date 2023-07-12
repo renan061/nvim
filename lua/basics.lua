@@ -22,6 +22,7 @@ vim.opt.fileformats:append({"mac"}) -- support all kinds of EOLs
 vim.opt.incsearch = true -- search as characters are entered
 
 -- use system clipboard for copy/paste
+-- LINUX: requires xclip
 vim.opt.clipboard = "unnamedplus"
 
 -- show ruler

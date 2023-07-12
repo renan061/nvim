@@ -10,6 +10,7 @@ local packer = require("packer").startup(function()
         requires = { "nvim-tree/nvim-web-devicons" },
     }
 
+    -- requires "pip install neovim"
     use "whonore/Coqtail"
 end)
 
