@@ -1,19 +1,8 @@
 -- coqtail mappings 
 do
     -- TODO
-    local toArrow = {
-        h = "Left",
-        j = "Down",
-        k = "Up",
-        l = "Right",
-    }
-
-    local toLetter = {
-        Left  = "h",
-        Down  = "j",
-        Up    = "k",
-        Right = "l",
-    }
+    local toArrow  = {h    = "Left", j    = "Down", k = "Up", l     = "Right"}
+    local toLetter = {Left = "h",    Down = "j",    Up = "k", Right = "l"}
 
     local map = vim.api.nvim_set_keymap
     local options = { noremap = true, silent = true }
@@ -36,6 +25,8 @@ do
     map_arrows("Right", "CoqToLine")
 
     map("n", "<C-e>", wrapcmd("CoqJumpToError"), options)
+    local s = ":CoqStart<CR> | :vert res 84<CR> | <C-w><C-w> | :res 22<CR> | <C-w><C-w><C-w><C-w>";
+    map("n", "<C-s>", s, {})
 
     local function map_query(lhs, rhs)
         lhs = "<C-" .. lhs .. ">"

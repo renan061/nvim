@@ -18,3 +18,7 @@ do
     -- map("n", "<leader>r", ":NvimTreeRefresh", {})
     -- map("n", "<leader>n", ":NvimTreeFindFile<CR>", {})
 end
+
+-- misc
+do
+end
