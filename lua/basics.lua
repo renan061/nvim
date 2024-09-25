@@ -15,18 +15,18 @@ vim.cmd("colorscheme dracula")
 
 vim.opt.mouse = "a"
 vim.opt.encoding = "utf-8"
-vim.opt.autoread = true -- auto-reloading modified files
-vim.opt.swapfile = false -- no swap file
-vim.opt.number = true -- show line numbers
-vim.opt.fileformats:append({"mac"}) -- support all kinds of EOLs
-vim.opt.incsearch = true -- search as characters are entered
+vim.opt.autoread = true               -- auto-reloading modified files
+vim.opt.swapfile = false              -- no swap file
+vim.opt.number = true                 -- show line numbers
+vim.opt.fileformats:append({ "mac" }) -- support all kinds of EOLs
+vim.opt.incsearch = true              -- search as characters are entered
 
 -- use system clipboard for copy/paste
 -- LINUX: requires xclip
 vim.opt.clipboard = "unnamedplus"
 
 -- show ruler
-vim.opt.ruler = true 
+vim.opt.ruler = true
 vim.opt.colorcolumn = "80"
 
 -- tabs
@@ -44,3 +44,6 @@ vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])
 vim.g.coqtail_noindent_comment = 1
 vim.g.coqtail_nomap = 1
 vim.g.coqtail_noimap = 1
+
+vim.g.OmniSharp_server_use_mono = 1
+vim.g.OmniSharp_server_use_net6 = 1

@@ -1,20 +1,29 @@
-local packer = require("packer").startup(function()
-    use "wbthomason/packer.nvim" -- packer manages itself
+-- Bootstrap
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
 
-    use "neovim/nvim-lspconfig" 
+-- Plugins
+require("lazy").setup({
+    "neovim/nvim-lspconfig",
 
-    use "Mofiqul/dracula.nvim"
+    "Mofiqul/dracula.nvim",
 
-    use { -- nvim-tree
+    { -- requires "Hack Nerd Font" from https://www.nerdfonts.com
         "nvim-tree/nvim-tree.lua",
-        requires = { "nvim-tree/nvim-web-devicons" },
-    }
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        config = function() require("nvim-tree").setup({}) end,
+    },
 
-    -- requires "pip install neovim"
-    use "whonore/Coqtail"
-end)
-
-require("nvim-tree").setup({})
-
-return packer
-
+    -- requires "pip install pynvim"
+    "whonore/Coqtail",
+})
