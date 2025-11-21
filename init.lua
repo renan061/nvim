@@ -4,6 +4,7 @@ require("lsp")
 require("mappings")
 
 local lspconfig = require("lspconfig")
+lspconfig.solidity_ls_nomicfoundation.setup({})
 lspconfig.bashls.setup({})
 lspconfig.ccls.setup({})
 lspconfig.gopls.setup({})

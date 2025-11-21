@@ -27,7 +27,7 @@ vim.opt.clipboard = "unnamedplus"
 
 -- show ruler
 vim.opt.ruler = true
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80,100"
 
 -- tabs
 vim.opt.tabstop = 4
