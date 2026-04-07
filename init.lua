@@ -6,7 +6,7 @@ require("mappings")
 -- vim.lsp.enable("solidity_ls_nomicfoundation")
 -- vim.lsp.enable("bashls")
 -- vim.lsp.enable("ccls")
--- vim.lsp.enable("gopls")
+vim.lsp.enable("gopls")
 -- vim.lsp.enable("rust_analyzer")
 -- vim.lsp.config("hls", {})
 -- vim.lsp.config("pyright", {})
@@ -22,7 +22,7 @@ vim.lsp.config("lua_ls", {
     }
 })
 
-lspconfig.vtsls.setup({})
+vim.lsp.config("vtsls", {})
 vim.filetype.add({ extension = { jsx = "javascriptreact" } })
 vim.filetype.add({ extension = { tsx = "typescriptreact" } })
 
