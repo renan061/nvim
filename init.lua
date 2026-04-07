@@ -21,7 +21,10 @@ vim.lsp.config("lua_ls", {
         }
     }
 })
-vim.lsp.enable("lua_ls")
+
+lspconfig.vtsls.setup({})
+vim.filetype.add({ extension = { jsx = "javascriptreact" } })
+vim.filetype.add({ extension = { tsx = "typescriptreact" } })
 
 vim.diagnostic.config({
     virtual_text = false,

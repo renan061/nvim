@@ -21,7 +21,16 @@ require("lazy").setup({
     { -- requires "Hack Nerd Font" from https://www.nerdfonts.com
         "nvim-tree/nvim-tree.lua",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        config = function() require("nvim-tree").setup({}) end,
+        config = function()
+            require("nvim-tree").setup({
+                filters = {
+                    dotfiles = false,
+                },
+                git = {
+                    ignore = false,
+                },
+            })
+        end,
     },
 
     -- requires "pip install pynvim"
