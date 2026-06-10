@@ -4,6 +4,7 @@ require("lsp")
 require("mappings")
 
 vim.lsp.enable("gopls")
+vim.lsp.enable("clangd")
 
 vim.diagnostic.config({
     virtual_text = false,

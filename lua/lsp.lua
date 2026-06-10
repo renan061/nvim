@@ -4,8 +4,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         local options = {noremap = true, silent = true, buffer = ev.buf}
 
         vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, options)
-        vim.keymap.set("n", "<leader>j", vim.diagnostic.goto_next, options)
-        vim.keymap.set("n", "<leader>k", vim.diagnostic.goto_prev, options)
+        vim.keymap.set("n", "<leader>j", function() vim.diagnostic.jump({ count =  1 }) end, options)
+        vim.keymap.set("n", "<leader>k", function() vim.diagnostic.jump({ count = -1 }) end, options)
 
         vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover, options)
         vim.keymap.set("n", "<leader>t", vim.lsp.buf.type_definition, options)
@@ -15,6 +15,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("n", "<leader>d", vim.lsp.buf.definition, options)
         vim.keymap.set("n", "<leader>D", vim.lsp.buf.declaration, options)
         vim.keymap.set("n", "<leader>i", vim.lsp.buf.implementation, options)
-        vim.keymap.set('n', '<leader>u', vim.lsp.buf.references, bufopts)
+        vim.keymap.set('n', '<leader>u', vim.lsp.buf.references, options)
     end
 })
