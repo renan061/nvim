@@ -18,3 +18,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', '<leader>u', vim.lsp.buf.references, options)
     end
 })
+
+vim.api.nvim_create_user_command("LspRestart", function()
+  local clients = vim.lsp.get_clients()
+  vim.lsp.stop_client(clients, true)
+  vim.defer_fn(function() vim.cmd("edit") end, 100)
+end, {})
